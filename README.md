@@ -1,4 +1,4 @@
-# Post Course – Java Project: Meeting Scheduler
+# Meeting Calendar
 
 ## Overview
 
@@ -35,23 +35,15 @@ Based on the sample input, the program will output:
 1. **Clone the Repository**:
 
    ```sh
-   git clone https://github.com/yourusername/meeting-scheduler.git
-   cd meeting-scheduler
+   git clone https://github.com/PabloJulianRial/calendar.git
+   cd calendar
    ```
 
-2. **Compile the Program**:
+2. **Run the Program**:
 
-   ```sh
-   javac MeetingScheduler.java
-   ```
+ Run the program from the Main class by clicking the green play button.
 
-3. **Run the Program**:
-
-   ```sh
-   java MeetingScheduler
-   ```
-
-4. **Follow the Prompts**:
+3. **Follow the Prompts**:
 
    - Enter your calendar entries.
    - Enter your daily bounds.
@@ -59,14 +51,20 @@ Based on the sample input, the program will output:
    - Enter your co-worker's daily bounds.
    - Specify the desired meeting duration.
 
-5. **View Possible Meeting Slots**:
+4. **View Possible Meeting Slots**:
    - The program will display all possible meeting slots that fit the criteria.
 
 ## Project Structure
 
-- **MeetingScheduler.java**: Main class that handles user input and coordinates the scheduling logic.
+- **Main.java**: Main class combines all the other classes and methods to run the program.
+- **CalendarMeetings.java**: Provides structure for the calendars, which is a list of string arrays.
+- **Color.java**: Provides static variables that represent ASCII color codes.
+- **DailyBounds.java**: Provides structure to construct each calendar's starting and finishing times.
+- **Input.java**: Implements methods for the different inputs prompted to the user that collect information about the calendars.
+- **Scheduler.java**: Provides the methods to process the inputs to create the calendars, merge them, and find the available slots.
+- **Utility.java**: Converts military time to minutes of the day and vice versa.
 - **README.md**: This file, providing an overview and usage instructions for the project.
 
 ## Testing
 
-The project includes multiple test cases to demonstrate the working solution. Make sure to input various scenarios to see the flexibility and robustness of the scheduling logic.
+The project includes multiple test cases implemented with Junit in the package org.example.test.
